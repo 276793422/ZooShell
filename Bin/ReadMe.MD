@@ -1,6 +1,6 @@
 目录：
 Plugins		目录放插件
-Functions	目录放一些lua 脚本，解释器启动会自动加载，功能类似于加载内部函数
+Functions	目录放一些lua 脚本，解释器启动会自动加载，功能类似于加载内部函数，内部插件后缀为 .plug
 Dll		目录放一些可能需要的DLL
 API		目录放API 函数数据库，加载数据库之后可以直接使用WindowsAPI函数，类似C语言，连lib都不用导入
 
