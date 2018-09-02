@@ -1,0 +1,35 @@
+
+
+function GetFileMD5(szFile)
+	v = Memory.malloc(1024);
+	_ ,l = System.cdegetcall("Dll\\lshsafes.dll.1215", "?GetFileMD5@@YA_NPAD0@Z", szFile, v);
+	System.FreeLibrary(l);
+	s = Memory.MemToStr(v);
+	Memory.free(v);
+	return s;
+end
+
+function GetFileSHA1(szFile)
+	v = Memory.malloc(1024);
+	_ ,l = System.cdegetcall("Dll\\lshsafes.dll.1215", "?GetFileSHA1@@YA_NPAD0@Z", szFile, v);
+	System.FreeLibrary(l);
+	s = Memory.MemToStr(v);
+	Memory.free(v);
+	return s;
+end
+
+function GetFileCRC32(szFile)
+	v = Memory.malloc(1024);
+	_ ,l = System.cdegetcall("Dll\\lshsafes.dll.1215", "?GetFileCRC32@@YA_NPAD0@Z", szFile, v);
+	System.FreeLibrary(l);
+	s = Memory.MemToStr(v);
+	Memory.free(v);
+	return s;
+end
+
+
+
+
+
+
+

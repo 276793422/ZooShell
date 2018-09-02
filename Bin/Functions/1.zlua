@@ -1,0 +1,15 @@
+
+function ZooLuaTest(szParam)
+	print(szParam);
+	return MessageBox(NULL, "ZooLuaTest", "Test", MB_OK);
+end
+
+function ioctl(a, b)
+	v = Buffer.create();
+	Buffer.cDWORD(v, a);
+	Buffer.cDWORD64(v, b);
+	p, l = Buffer.get(v)
+	b, c = ARK.ioctl(2279424, p, l, 0, 0);
+	Buffer.destroy(v);
+	print(b, c);
+end
